@@ -4,7 +4,7 @@ import math
 import statistics
 
 #environment configuration
-interval = 10
+interval = 1
 RANDOM_SEED = 10
 random.seed(RANDOM_SEED)
 env = simpy.Environment()
@@ -15,10 +15,10 @@ numbersCPU = 1
 #Running
 velocityCPU = 3 #Instructios per cicle
 #queues
-cpus = simpy.Resource(env, capacity = 1)
+cpus = simpy.Resource(env, capacity = 2)
 timesPassed = []
 #procesos
-numberProcess = 10
+numberProcess = 200
 
 def newProcess():
     for i in range(numberProcess):
